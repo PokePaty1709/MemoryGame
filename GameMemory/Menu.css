@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap");
+body {
+background-color:#46b9f7;
+}
+
+img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;    
+  height: 210px;
+  width: 700px; 
+
+}
+
+a:link{
+text-decoration:none;
+}
+
+#play {
+  margin: 0 auto;
+  height:50px;
+  width:600px;
+  background:#6bcaff;
+  text-align:center;
+  font-size:40px;
+  background-size: 1px 300%;
+ -webkit-transition:0.5s;
+  transition:0.5s;
+  color:#116da1;
+  font-family:'Chelsea Market', cursive;
+  cursor:pointer;
+  
+}
+
+#play:hover {
+  background:rgb(255, 104, 210);
+  color:white;
+-webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg);
+}
+
+
+#scores {
+  margin: 0 auto;
+  height:50px;
+  width:600px;
+  background:#6bcaff;
+  font-size:40px;
+  text-align:center;
+  font-family:'Chelsea Market', cursive;
+  color:#116da1;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+#scores:hover {
+  background:rgb(255, 104, 210);
+  color:white;
+  -webkit-transform:rotate(2deg);
+  transform:rotate(2deg);
+  
+}
+
+#settings {
+  margin: 0 auto;
+  height:50px;
+  width:600px;
+  background:#6bcaff;
+  font-size:40px;
+  text-align:center;
+  font-family:'Chelsea Market', cursive;
+  color:#116da1;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+#settings:hover {
+  background:rgb(255, 104, 210);
+  color:white;
+  -webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg); 
+}
+
