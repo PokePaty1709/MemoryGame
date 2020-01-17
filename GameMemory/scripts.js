@@ -1,3 +1,19 @@
+const test =[
+  {imgf:"../img1.png", altf: "Mouse", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img1.png", altf: "Mouse", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img2.png", altf: "Tiger", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img2.png", altf: "Tiger", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img3.png", altf: "Rabbit", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img3.png", altf: "Rabbit", imgb:"../logo.png", altb:"Meromy"},]
+for (let i = 0; i < test.length; i++) {
+  const element = test[i];
+  document.querySelector(".memory-game").innerHTML += `<div class="memory-card" data-framework="mouse">
+  <img class="front-face" src=${element.imgf} alt=${element.altf} />
+  <img class="back-face" src=${element.imgb} alt=${element.altb} />
+</div>`
+}
+
+
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
@@ -17,7 +33,6 @@ function flipCard() {
 
     return;
   }
-  //yo
 
   // second click
   secondCard = this;
