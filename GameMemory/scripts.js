@@ -14,7 +14,7 @@ const test =[
 ]
 for (let i = 0; i < test.length; i++) {
   const element = test[i];
-  document.querySelector(".memory-game").innerHTML += `<div class="memory-card" data-framework="mouse">
+  document.querySelector(".memory-game").innerHTML += `<div class="memory-card" data-framework="">
   <img class="front-face" src=${element.imgf} alt=${element.altf} />
   <img class="back-face" src=${element.imgb} alt=${element.altb} />
 </div>`
@@ -84,3 +84,4 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
