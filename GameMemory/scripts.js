@@ -1,4 +1,4 @@
-//array cards
+//array cards lol
 const test =[
   {imgf:"../img1.png", altf: "Mouse", imgb:"../logo.png", altb:"Meromy"},
   {imgf:"../img1.png", altf: "Mouse", imgb:"../logo.png", altb:"Meromy"},
