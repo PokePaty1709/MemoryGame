@@ -1,4 +1,4 @@
-//array cards lol
+
 const test =[
   {imgf:"../img1.png", altf: "Mouse", imgb:"../logo.png", altb:"Meromy"},
   {imgf:"../img1.png", altf: "Mouse", imgb:"../logo.png", altb:"Meromy"},
@@ -15,7 +15,7 @@ const test =[
 ]
 for (let i = 0; i < test.length; i++) {
   const element = test[i];
-  document.querySelector(".memory-game").innerHTML += `<div class="memory-card" data-framework="">
+  document.querySelector(".memory-game").innerHTML += `<div class="memory-card" data-framework="${element.altf}">
   <img class="front-face" src=${element.imgf} alt=${element.altf} />
   <img class="back-face" src=${element.imgb} alt=${element.altb} />
 </div>`
