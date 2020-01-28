@@ -22,43 +22,8 @@ for (let i = 0; i < test.length; i++) {
 }
 
 
-const cards = document.querySelectorAll('.memory-card');
-
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
-//timer
-var timer = {
-  seconds: 0,
-  minutes: 0,
-  clearTime: -1
-};
-var startTimer = function() {
-  if (timer.seconds === 59) {
-    timer.minutes++;
-    timer.seconds = 0;
-  } else {
-    timer.seconds++;
-  }
-  var formattedSec = "0";
-  if (timer.seconds < 10) {
-    formattedSec += timer.seconds;
-  } else {
-    formattedSec = String(timer.seconds);
-  }
-
-  var time = String(timer.minutes) + ":" + formattedSec;
-  $(".timer").text(time);
-};
-// Resets timer state and restarts timer
-function resetTimer() {
-  clearInterval(timer.clearTime);
-  timer.seconds = 0;
-  timer.minutes = 0;
-  $(".timer").text("0:00");
-
-  timer.clearTime = setInterval(startTimer, 1000);
-}
+let second = 0, minute = 0, hour = 0;
+let timer = document.querySelector('.timer');
 
 function flipCard() {
   if (lockBoard) return;
