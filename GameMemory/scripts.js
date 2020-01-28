@@ -31,38 +31,6 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-//timer
-var timer = {
-  seconds: 0,
-  minutes: 0,
-  clearTime: -1
-};
-var startTimer = function() {
-  if (timer.seconds === 59) {
-    timer.minutes++;
-    timer.seconds = 0;
-  } else {
-    timer.seconds++;
-  }
-  var formattedSec = "0";
-  if (timer.seconds < 10) {
-    formattedSec += timer.seconds;
-  } else {
-    formattedSec = String(timer.seconds);
-  }
-
-  var time = String(timer.minutes) + ":" + formattedSec;
-  $(".timer").text(time);
-};
-// Resets timer state and restarts timer
-function resetTimer() {
-  clearInterval(timer.clearTime);
-  timer.seconds = 0;
-  timer.minutes = 0;
-  $(".timer").text("0:00");
-
-  timer.clearTime = setInterval(startTimer, 1000);
-}
 
 function flipCard() {
   if (lockBoard) return;
@@ -74,7 +42,7 @@ function flipCard() {
     // first click
     hasFlippedCard = true;
     firstCard = this;
-
+    startTimer();
     return;
   }
 
@@ -121,3 +89,32 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+//Timer
+function startTimer(duration, display) {
+  let timer = duration, minutes, seconds;
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          timer = duration;
+      }
+
+      if (timer ==0) {
+        alert("Game Over!")
+        clearInterval
+
+      }
+  }, 1000);
+}
+
+window.onload = function () {
+  let counter = 60*3,
+  display = document.querySelector('#time');
+  startTimer(counter, display);
+};

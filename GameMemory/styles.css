@@ -53,3 +53,49 @@ body {
 .front-face {
   transform: rotateY(180deg);
 }
+
+#time {
+  background-color: rgb(255, 104, 210) ;
+  color: #f1f1f1;
+  font-family: 'Raleway', sans-serif;
+  
+
+}
+
+#tempo {
+  background-color: rgb(255, 104, 210) ;
+  width: 230px;
+  height: 40px;
+  color: #f1f1f1;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+
+#player-card {
+  width: 230px;
+  height:180px;
+  background-color: #6bcaff;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  border:2px solid #2083b8 ;
+  
+}
+
+#nom{
+  width: 110px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  border: 2px solid #2083b8;
+  padding: 5px; 
+}
+
+#name, #score, #mouv, #mode {
+  padding: 5px;
+}

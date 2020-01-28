@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap");
-
 body {
     background-color: #46b9f7;
     }
@@ -17,7 +15,7 @@ a:link{
     text-decoration:none;
     }
 
-#onePlayer {
+#easy {
   margin: 0 auto;
   height:50px;
   width:600px;
@@ -28,18 +26,18 @@ a:link{
  -webkit-transition:0.5s;
   transition:0.5s;
   color:#116da1;
-  font-family:'Chelsea Market', cursive;
+  font-family: 'Raleway', sans-serif;
   cursor:pointer;
 }
 
-#onePlayer:hover {
+#easy:hover {
     background:rgb(255, 104, 210);
     color:white;
   -webkit-transform:rotate(-2deg);
     transform:rotate(-2deg);
 }
 
-#computer {
+#medium {
     margin: 0 auto;
     height:50px;
     width:600px;
@@ -50,18 +48,18 @@ a:link{
    -webkit-transition:0.5s;
     transition:0.5s;
     color:#116da1;
-    font-family:'Chelsea Market', cursive;
+    font-family: 'Raleway', sans-serif;
     cursor:pointer;
   }
   
-#computer:hover {
+#medium:hover {
       background:rgb(255, 104, 210);
       color:white;
     -webkit-transform:rotate(2deg);
       transform:rotate(2deg);
   }
 
-#twoPlayers {
+#hard {
     margin: 0 auto;
     height:50px;
     width:600px;
@@ -72,11 +70,11 @@ a:link{
    -webkit-transition:0.5s;
     transition:0.5s;
     color:#116da1;
-    font-family:'Chelsea Market', cursive;
+    font-family: 'Raleway', sans-serif;
     cursor:pointer;
   }
   
-#twoPlayers:hover {
+#hard:hover {
       background:rgb(255, 104, 210);
       color:white;
     -webkit-transform:rotate(-2deg);
@@ -94,7 +92,7 @@ a:link{
    -webkit-transition:0.5s;
     transition:0.5s;
     color:#116da1;
-    font-family:'Chelsea Market', cursive;
+    font-family: 'Raleway', sans-serif;
     cursor:pointer;
   }
   
