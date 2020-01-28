@@ -12,6 +12,10 @@ const test =[
   {imgf:"../img5.png", altf: "Monkey", imgb:"../logo.png", altb:"Meromy"},
   {imgf:"../img6.png", altf: "Sheep", imgb:"../logo.png", altb:"Meromy"},
   {imgf:"../img6.png", altf: "Sheep", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img7.png", altf: "Pig", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img7.png", altf: "Pig", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img8.png", altf: "Cow", imgb:"../logo.png", altb:"Meromy"},
+  {imgf:"../img8.png", altf: "Cow", imgb:"../logo.png", altb:"Meromy"},
 ]
 for (let i = 0; i < test.length; i++) {
   const element = test[i];
@@ -82,4 +86,3 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
