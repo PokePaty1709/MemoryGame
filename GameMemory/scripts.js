@@ -31,8 +31,10 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let timer
 
 function flipCard() {
+  clearInterval (timer)
   if (lockBoard) return;
   if (this === firstCard) return;
 
@@ -42,9 +44,12 @@ function flipCard() {
     // first click
     hasFlippedCard = true;
     firstCard = this;
-    startTimer();
     return;
   }
+
+  let counter = 5,
+  display = document.querySelector('#time');
+  startTimer(counter, display);
 
   // second click
   secondCard = this;
@@ -93,28 +98,26 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 //Timer
 function startTimer(duration, display) {
-  let timer = duration, minutes, seconds;
-  setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
+  let minutes = 0
+  let seconds = 0
+  let count = duration
+  
+  timer = setInterval(function () {
+      minutes = parseInt(count / 60, 10);
+      seconds = parseInt(count % 60, 10);
       minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
       display.textContent = minutes + ":" + seconds;
 
-      if (--timer < 0) {
-          timer = duration;
-      }
-
-      if (timer ==0) {
+      if (count === 0) {
         alert("Game Over!")
-        clearInterval
+        clearInterval (timer)
 
       }
+      count--
   }, 1000);
 }
 
 window.onload = function () {
-  let counter = 60*3,
-  display = document.querySelector('#time');
-  startTimer(counter, display);
+  
 };
