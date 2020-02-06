@@ -39,6 +39,9 @@ let firstCard, secondCard;
 let matches = 0
 let init = 0
 let timerStart
+let score = 0
+let moves = 0
+let regra
 
 // função para virar as cartas  
 function flipCard() {
@@ -54,17 +57,22 @@ function flipCard() {
   this.classList.add('flip');
 
   if (!hasFlippedCard) {
-
-    // primeiro clique
+    // primeiro clique 
+    
     hasFlippedCard = true;
     firstCard = this;
+    
+    moves++
+    document.getElementById("mouv").innerHTML = `Movements: ${moves}`
     return;
+    
   }
 
 
   // segundo click
   secondCard = this;
-
+  moves++
+  document.getElementById("mouv").innerHTML = `Movements: ${moves}`
   checkForMatch();
 }
 
@@ -72,11 +80,24 @@ function flipCard() {
 // ver se as cartas dão "match"
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
-  isMatch ? disableCards() : unflipCards();
-
   
-
+  isMatch ? disableCards() : unflipCards();
+  
+  if (isMatch) {
+    score = score + 10
+    
+    
+    document.getElementById("score").innerHTML = `Score: ${score}`
+    
+    
+  }else 
+  score = score - 2
+  
+  
+  document.getElementById("score").innerHTML = `Score: ${score}`
+  
+  
+  
 }
 
 
@@ -84,23 +105,23 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
-
+  
   resetBoard();
-
+  
   matches++
   if (matches == MATCH_CARD_LIMIT) {
     alert("you win")
   }
-
+  
 }
 
 function unflipCards() {
   lockBoard = true;
-
+  
   setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
-
+    
     resetBoard();
   }, 1500);
 }
@@ -125,24 +146,20 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 function startTimer(duration, display) {
   let timer = duration, minutes, seconds;
   init = 1
-
+  
   timerStart = setInterval(() => {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     display.textContent = minutes + ":" + seconds;
-
+    
     if (--timer < 0) {
       clearInterval(timerStart)
       alert('GAME OVER')
       timer = duration;
     }
-
+    
   }, 1000);
 }
-
-window.onload = function () {
-
-};
-
+      
