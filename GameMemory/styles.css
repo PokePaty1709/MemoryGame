@@ -71,7 +71,8 @@ body {
   font-family: 'Raleway', sans-serif;
   border-radius: 10px;
   text-align: center;
-
+  margin-top: 120px;
+  margin-left: 20px;
 }
 
 
@@ -84,7 +85,8 @@ body {
   font-family: 'Raleway', sans-serif;
   padding: 20px;
   border:2px solid #2083b8 ;
-  
+  margin-top: 60px;
+  margin-left: 20px;
 }
 
 #nom{
