@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -7,30 +8,42 @@
 
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-  
-</head>
-<body>
-  <!-- <select id="playerName"></select></div>
-  <button id="play">Jogar</button> -->
 
-    <span id="grade" class="moves">
+</head>
+
+<body>
+
+
+
+  <span id="grade" class="moves">
     <div id="tempo">TIME <span id="time"></span></div>
-    <br> 
+    <br>
     <div id="player-card">
-      <div id="playerName">Name :</div>
+
+      <div class="playerOne">
+        <div id="statsOne">Seleciona o jogador 1 <select id="playerOne"></select></div>
+        <div id="playerOneName"></div>
+      </div>
+
       <div id="mouv">Movements :</div>
-      <div id="mode">Mode :Medium</div>
+      <div id="mode">Mode : Easy</div>
       <div id="score">Score :</div>
-  </div>
+    </div>
+    <button id="confirm"> Confirmar jogador</button>
   </span>
-  <section class="memory-game">
-    
-    
+
+  
+
+
+  <section id="cards" class="memory-game">
+
+
   </section>
 
-  <script src="ModoMedium.js"></script>
+  <script src="ModoEasy.js"></script>
+  <script src="selectPlayers.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-  
-  
+
 </body>
+
 </html>

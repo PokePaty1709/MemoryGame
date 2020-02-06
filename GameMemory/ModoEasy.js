@@ -85,7 +85,7 @@ function checkForMatch() {
   isMatch ? disableCards() : unflipCards();
 
   if (isMatch) {
-    score = score + 20
+    score = score + 10
 
 
     document.getElementById("score").innerHTML = `Score: ${score}`

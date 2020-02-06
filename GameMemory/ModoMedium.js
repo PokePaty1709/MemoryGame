@@ -109,7 +109,23 @@ function disableCards() {
 
   matches++
   if (matches == MATCH_CARD_LIMIT) {
-    alert("you win")
+    Swal.fire({
+      title: 'Vitória',
+      text: ` venceu na diagonal `,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Jogar novamente'
+  }).then((result) => {
+      if (result.value) {
+          location.reload();
+
+      } else {
+
+          location.href = "menu.html";
+      }
+  })
   }
 
 }
@@ -155,7 +171,23 @@ function startTimer(duration, display) {
 
     if (--timer < 0) {
       clearInterval(timerStart)
-      alert('GAME OVER')
+      Swal.fire({
+        title: 'Yes',
+        text: ` but actually no`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Jogar novamente'
+      }).then((result) => {
+        if (result.value) {
+          location.reload();
+
+        } else {
+
+          location.href = "menu.html";
+        }
+      })
       timer = duration;
     }
 

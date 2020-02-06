@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,105 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <title>Meromy</title>
 </head>
+
 <body>
-    <div id="img"><img src="../LOGOM.png" alt="Meromy" ></div>
-        <a href="index.html"><div id="easy"><p>EASY</p></div></a>
-        <a href="ModoMedium.html"><div id="medium"><p>MEDIUM</p></div></a>
-        <a href="ModoHard.html"><div id="hard"><p>HARD</p></div></a>
-        <a href="Ranking.html"><div id="scores"><p>SCORES</p></div></a>
+    <div id="img"><img src="../LOGOM.png" alt="Meromy"></div>
+    <a href="ModoEasy.html">
+        <div id="easy">
+            <p>EASY</p>
+        </div>
+    </a>
+    <a href="ModoMedium.html">
+        <div id="medium">
+            <p>MEDIUM</p>
+        </div>
+    </a>
+    <a href="ModoHard.html">
+        <div id="hard">
+            <p>HARD</p>
+        </div>
+    </a>
+    <a href="Ranking.html">
+        <div id="scores">
+            <p>SCORES</p>
+        </div>
+    </a>
+    <div id="addPlayerModal" class="modal">
+
+        <div class="modal-content">
+
+            <h1>Introduzir nome do jogador</h1>
+            <input type="text" id="addPlayer" required>
+            <div id="contentModal">
+
+                <button id="createPlayer" class="buttonModal">Criar jogador</button>
+                <p id="msgError">Este nome já existe!</p>
+                <p id="msgErrorNone">Não pode ser adicionado um nome vazio!</p>
+
+            </div>
+        </div>
+    </div>
 
 </body>
+
+<script>
+    let players = [];
+    if (localStorage.getItem('players')) {
+        players = JSON.parse(localStorage.getItem('players'))
+    } else {
+        players = []
+    }
+
+
+    function newP() {
+
+        // Get the modal
+        const modal = document.getElementById("addPlayerModal");
+
+        modal.style.display = "block";
+        document.querySelector("#msgError").style.visibility = "hidden"
+        document.querySelector("#msgErrorNone").style.visibility = "hidden"
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+
+
+
+    document.getElementById("createPlayer").onclick = function () {
+        let newPlayer = {}
+        newPlayer.name = document.getElementById("addPlayer").value
+
+        if (newPlayer.name === "") {
+            document.querySelector("#msgError").style.visibility = "hidden"
+            document.querySelector("#msgErrorNone").style.visibility = "visible"
+
+        } else if (players.some(players => players.name === newPlayer.name)) {
+            document.querySelector("#msgErrorNone").style.visibility = "hidden"
+            document.querySelector("#msgError").style.visibility = "visible"
+
+
+        } else {
+
+
+
+            players[players.length] = newPlayer
+            console.log(players);
+            localStorage.setItem("players", JSON.stringify(players))
+            document.getElementById("addPlayer").value = ""
+            document.querySelector("#msgError").style.visibility = "hidden"
+            document.querySelector("#msgErrorNone").style.visibility = "hidden"
+            const modal = document.getElementById("addPlayerModal");
+            modal.style.display = "none";
+
+        }
+
+    }
+</script>
+
 </html>
