@@ -1,5 +1,5 @@
 body {
-    background-color: #46b9f7;
+    background-color: #a894ff;
     }
 
 img{
@@ -8,14 +8,13 @@ img{
     margin-right:auto;    
     height: 210px;
     width: 700px; 
-  
     }
 
 a:link{
     text-decoration:none;
     }
 
-#easy {
+#easy, #medium, #hard,#scores {
   margin: 0 auto;
   height:50px;
   width:600px;
@@ -37,21 +36,6 @@ a:link{
     transform:rotate(-2deg);
 }
 
-#medium {
-    margin: 0 auto;
-    height:50px;
-    width:600px;
-    background:#6bcaff;
-    text-align:center;
-    font-size:40px;
-   background-size: 1px 300%;
-   -webkit-transition:0.5s;
-    transition:0.5s;
-    color:#116da1;
-    font-family: 'Raleway', sans-serif;
-    cursor:pointer;
-  }
-  
 #medium:hover {
       background:rgb(255, 104, 210);
       color:white;
@@ -59,21 +43,6 @@ a:link{
       transform:rotate(2deg);
   }
 
-#hard {
-    margin: 0 auto;
-    height:50px;
-    width:600px;
-    background:#6bcaff;
-    text-align:center;
-    font-size:40px;
-   background-size: 1px 300%;
-   -webkit-transition:0.5s;
-    transition:0.5s;
-    color:#116da1;
-    font-family: 'Raleway', sans-serif;
-    cursor:pointer;
-  }
-  
 #hard:hover {
       background:rgb(255, 104, 210);
       color:white;
@@ -81,22 +50,7 @@ a:link{
       transform:rotate(-2deg);
   }
 
-  #scores {
-    margin: 0 auto;
-    height:50px;
-    width:600px;
-    background:#6bcaff;
-    text-align:center;
-    font-size:40px;
-   background-size: 1px 300%;
-   -webkit-transition:0.5s;
-    transition:0.5s;
-    color:#116da1;
-    font-family: 'Raleway', sans-serif;
-    cursor:pointer;
-  }
-  
-  #scores:hover {
+#scores:hover {
       background:rgb(255, 104, 210);
       color:white;
     -webkit-transform:rotate(2deg);

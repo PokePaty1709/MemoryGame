@@ -109,7 +109,22 @@ function disableCards() {
 
   matches++
   if (matches == MATCH_CARD_LIMIT) {
-    alert("you win")
+    Swal.fire({
+      title: 'You win!',
+      showCancelButton: true,
+      confirmButtonColor: '#46b9f7',
+      confirmButtonText: 'Play Again',
+      cancelButtonColor: 'rgb(255, 104, 210)',
+
+  }).then((result) => {
+      if (result.value) {
+          location.reload();
+
+      } else {
+
+          location.href = "menu.html";
+      }
+  })
   }
 
 }
@@ -155,7 +170,21 @@ function startTimer(duration, display) {
 
     if (--timer < 0) {
       clearInterval(timerStart)
-     
+      Swal.fire({
+        title: 'Game Over!',
+      showCancelButton: true,
+      confirmButtonColor: '#46b9f7',
+      confirmButtonText: 'Try Again',
+      cancelButtonColor: 'rgb(255, 104, 210)',
+      }).then((result) => {
+        if (result.value) {
+          location.reload();
+
+        } else {
+
+          location.href = "menu.html";
+        }
+      })
       timer = duration;
     }
 

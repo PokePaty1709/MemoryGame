@@ -110,13 +110,12 @@ function disableCards() {
   matches++
   if (matches == MATCH_CARD_LIMIT) {
     Swal.fire({
-      title: 'Vitória',
-      text: ` venceu na diagonal `,
-      icon: 'warning',
+      title: 'You win!',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Jogar novamente'
+      confirmButtonColor: '#46b9f7',
+      confirmButtonText: 'Play Again',
+      cancelButtonColor: 'rgb(255, 104, 210)',
+
   }).then((result) => {
       if (result.value) {
           location.reload();
@@ -172,13 +171,11 @@ function startTimer(duration, display) {
     if (--timer < 0) {
       clearInterval(timerStart)
       Swal.fire({
-        title: 'Yes',
-        text: ` but actually no`,
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Jogar novamente'
+        title: 'Game Over!',
+      showCancelButton: true,
+      confirmButtonColor: '#46b9f7',
+      confirmButtonText: 'Try Again',
+      cancelButtonColor: 'rgb(255, 104, 210)',
       }).then((result) => {
         if (result.value) {
           location.reload();
