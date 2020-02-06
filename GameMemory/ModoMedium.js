@@ -111,7 +111,7 @@ function disableCards() {
             showCancelButton: true,
             confirmButtonColor: '#46b9f7',
             confirmButtonText: 'Play Again',
-            cancelButtonColor: 'rgb(255, 104, 210)',
+            cancelButtonColor: '#46b9f7',
 
         }).then((result) => {
             if (result.value) {
