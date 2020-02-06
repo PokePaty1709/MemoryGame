@@ -96,6 +96,6 @@ body {
   padding: 5px; 
 }
 
-#name, #score, #mouv, #mode {
+#playerName, #score, #mouv, #mode {
   padding: 5px;
 }

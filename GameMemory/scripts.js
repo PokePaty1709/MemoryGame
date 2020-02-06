@@ -1,4 +1,6 @@
-const EASY_MODE_TIME = 50
+const EASY_MODE_TIME = 180
+const MEDIUM_MODE_TIME = 120
+const HARD_MODE_TIME = 60
 const MATCH_CARD_LIMIT = 8
 
 //array das cartas
@@ -34,15 +36,15 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let timer
 let matches = 0
 let init = 0
-
+let timerStart
 
 // função para virar as cartas  
 function flipCard() {
 
   if (init == 0) {
+    clearInterval(timerStart)
     startTimer(EASY_MODE_TIME, document.querySelector('#time'));
   }
 
@@ -72,6 +74,9 @@ function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
   isMatch ? disableCards() : unflipCards();
+
+  
+
 }
 
 
@@ -83,7 +88,7 @@ function disableCards() {
   resetBoard();
 
   matches++
-  if(matches == MATCH_CARD_LIMIT) {
+  if (matches == MATCH_CARD_LIMIT) {
     alert("you win")
   }
 
@@ -118,26 +123,22 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 //função do timer
 function startTimer(duration, display) {
-  let minutes = 0
-  let seconds = 0
-  let count = duration
-  console.log("ww");
+  let timer = duration, minutes, seconds;
+  init = 1
 
-  timer = setInterval( () => {
-    console.log(count);
-
-    minutes = parseInt(count / 60, 10);
-    seconds = parseInt(count % 60, 10);
+  timerStart = setInterval(() => {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     display.textContent = minutes + ":" + seconds;
 
-    if (count === 0) {
-      alert("Game Over!")
-      clearInterval(timer)
-
+    if (--timer < 0) {
+      clearInterval(timerStart)
+      alert('GAME OVER')
+      timer = duration;
     }
-    count--
+
   }, 1000);
 }
 
