@@ -1,0 +1,51 @@
+body {
+    height: 100vh;
+    display: flex;
+   /*  background-color: #000; */
+  }
+
+#scoresBox {
+    background: linear-gradient(to bottom, #d6ccff 0%, rgb(177, 150, 218) 100%);
+    width: 400px;
+    height: 600px;
+    position: relative;
+    margin: 5% auto;
+    border: solid 3px #7b70a4;
+   /*  border-radius: 50px; */
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#txtRanking {
+    border-bottom: solid 2px #7b70a4;
+    padding: 30px;
+    font-size: 25px;
+    color: rgb(176, 22, 43);
+    font-family: 'Raleway', sans-serif;
+    color: azure;
+}
+
+.txtPlayers {
+    font-size: 20px;
+}
+
+.text-danger {
+    color: rgb(226, 17, 104)
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

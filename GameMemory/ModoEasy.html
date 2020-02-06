@@ -2,41 +2,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <title>Memory Game</title>
+    <title>Memory Game</title>
 
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <div id="startModal" class="modal">
+        <div class="container">
+            <p id="firstText">Insira o seu nome</p>
+            <div id="players">
+                <input type="text" name="player" id="player1" class="inputs" placeholder="Nome Jogador" required>
+            </div>
+            <button id="btnStart" onclick="chooseName()">Start Game</button>
+        </div>
+    </div>
 
 
-
-  <span id="grade" class="moves">
+    <span id="grade" class="moves">
     <div id="tempo">TIME <span id="time"></span></div>
     <br>
     <div id="player-card">
-
-      <div class="playerOne">
-        <div id="statsOne">Player : <select id="playerOne"></select></div>
-        <div id="playerOneName"></div>
-      </div>
-
-      <div id="mouv">Movements :</div>
-      <div id="mode">Mode : Easy</div>
-      <div id="score">Score :</div>
+        <div id="playerName">Nome: </div>
+        <div id="mouv">Movements :</div>
+        <div id="mode">Mode : Easy</div>
+        <div id="score">Score :</div>
     </div>
-   <button id="confirm"> Confirmar jogador</button>
-  </span>
+    </span>
 
-  <section id="cards" class="memory-game"> </section>
+    <section id="cards" class="memory-game"> </section>
 
-  <script src="ModoEasy.js"></script>
-  <script src="selectPlayers.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="ModoEasy.js"></script>
+    <script src="selectPlayers.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 </body>
 
