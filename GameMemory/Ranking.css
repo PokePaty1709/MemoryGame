@@ -1,11 +1,10 @@
 body {
     height: 100vh;
     display: flex;
-   /*  background-color: #000; */
   }
 
 #scoresBox {
-    background: linear-gradient(to bottom, #d6ccff 0%, rgb(177, 150, 218) 100%);
+    background: linear-gradient(to bottom, #c2b8e9 0%, rgb(177, 150, 218) 100%);
     width: 400px;
     height: 600px;
     position: relative;
@@ -20,17 +19,17 @@ body {
     border-bottom: solid 2px #7b70a4;
     padding: 30px;
     font-size: 25px;
-    color: rgb(176, 22, 43);
+    color: rgb(64, 30, 117);
     font-family: 'Raleway', sans-serif;
-    color: azure;
 }
 
 .txtPlayers {
     font-size: 20px;
+    color: rgb(64, 30, 117);
 }
 
 .text-danger {
-    color: rgb(226, 17, 104)
+    color: rgb(255, 255, 255)
 }
 body {
 	background: linear-gradient(-45deg, #eb8769, #f15893, #41bae6, #39e4bc);

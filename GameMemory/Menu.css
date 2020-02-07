@@ -3,6 +3,7 @@ body {
     }
 
 img{
+    margin-top: 50px;
     display:block;
     margin-left:auto;
     margin-right:auto;    
@@ -14,15 +15,15 @@ a:link{
     text-decoration:none;
     }
 
-#easy, #medium, #hard,#scores {
+#easy, #medium, #hard,#ranking {
   margin: 0 auto;
   height:50px;
   width:600px;
   background:#6bcaff;
   text-align:center;
   font-size:40px;
- background-size: 1px 300%;
- -webkit-transition:0.5s;
+  background-size: 1px 300%;
+  -webkit-transition:0.5s;
   transition:0.5s;
   color:#116da1;
   font-family: 'Raleway', sans-serif;
@@ -50,7 +51,7 @@ a:link{
       transform:rotate(-2deg);
   }
 
-#scores:hover {
+#ranking:hover {
       background:rgb(255, 104, 210);
       color:white;
     -webkit-transform:rotate(2deg);

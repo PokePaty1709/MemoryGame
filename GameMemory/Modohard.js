@@ -111,7 +111,7 @@ function disableCards() {
             showCancelButton: true,
             confirmButtonColor: '#46b9f7',
             confirmButtonText: 'Play Again',
-            cancelButtonColor: 'rgb(255, 104, 210)',
+            cancelButtonColor: 'ff68d2',
 
         }).then((result) => {
             if (result.value) {
@@ -173,7 +173,7 @@ function startTimer(duration, display) {
                 showCancelButton: true,
                 confirmButtonColor: '#46b9f7',
                 confirmButtonText: 'Try Again',
-                cancelButtonColor: '#46b9f7',
+                cancelButtonColor: '#ff68d2',
             }).then((result) => {
                 if (result.value) {
                     location.reload();

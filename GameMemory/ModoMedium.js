@@ -44,7 +44,7 @@ let moves = 0
 
 // função para virar as cartas  
 function flipCard() {
-
+    //adicionar timer ao primeiro clique
     if (init == 0) {
         clearInterval(timerStart)
         startTimer(MEDIUM_MODE_TIME, document.querySelector('#time'));
@@ -72,6 +72,7 @@ function flipCard() {
 
     checkForMatch();
 
+    //Regra → Todos os 4 movimentos, há shuffle das cartas
     if (moves !== 0 && moves % 4 === 0) {
         shuffle();
     }
@@ -106,12 +107,13 @@ function disableCards() {
     if (matches == MATCH_CARD_LIMIT) {
         clearInterval(timerStart)
         saveWinnerData()
+        //Box de fim de jogo
         Swal.fire({
             title: 'You win!',
             showCancelButton: true,
             confirmButtonColor: '#46b9f7',
             confirmButtonText: 'Play Again',
-            cancelButtonColor: '#46b9f7',
+            cancelButtonColor: '#ff68d2',
 
         }).then((result) => {
             if (result.value) {
@@ -168,12 +170,13 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             clearInterval(timerStart)
+            //Box de fim de jogo
             Swal.fire({
                 title: 'Game Over!',
                 showCancelButton: true,
                 confirmButtonColor: '#46b9f7',
                 confirmButtonText: 'Try Again',
-                cancelButtonColor: 'rgb(255, 104, 210)',
+                cancelButtonColor: 'ff68d2',
             }).then((result) => {
                 if (result.value) {
                     location.reload();
