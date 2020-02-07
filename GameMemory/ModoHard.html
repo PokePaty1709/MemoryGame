@@ -11,25 +11,28 @@
 <body>
   <div id="startModal" class="modal" style="font-family: 'Raleway', sans-serif;">
       <div class="container">
-          <p id="firstText">Enter your name</p>
+          <p id="firstText">Escolha o seu nome </p>
           <div id="players">
-              <input type="text" name="player" id="player1" class="inputs" placeholder="Player's name" required>
+              <input type="text" name="player" id="player1" class="inputs" placeholder="Nome do jogador " required>
           </div>
-          <button id="btnStart" onclick="chooseName()">Let's Play !</button>
+          <button id="btnStart" onclick="chooseName()">Vamos Jogar !</button>
       </div>
   </div>
 
 
     <span id="grade" class="moves">
-    <div id="tempo">TIME <span id="time"></span></div>
+    <div id="tempo">TEMPO <span id="time"></span></div>
     <br> 
     <div id="player-card">
-      <div id="playerName">Name :</div>
-      <div id="move">Movements :</div>
-      <div id="mode">Mode : Hard</div>
-      <div id="score">Score :</div>
+      <div id="playerName">Nome :  </div>
+      <div id="move">Movimentos : </div>
+      <div id="mode">Nível : DIFICIL</div>
+      <div id="score">Pontos :  </div>
   </div>
   </span>
+  <div id="dvbtn-back">
+    <button id="back" onclick="window.location.href='Menu.html'" >VOLTAR</button>
+</div>
   <section id="cards" class="memory-game"> </section>
 
   <script src="Modohard.js"></script>

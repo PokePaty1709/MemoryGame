@@ -136,15 +136,34 @@ input:-webkit-autofill {
 }
 
 #btnStart{
+  display: inline;
   height:40px;
   width:120px;
   text-decoration: none;
   color: #fff;
-  border:1px solid #2083b895;
-  display: inline;
+  border:1px solid rgb(118, 97, 238)  ;
   margin: auto;
   transition: .5s;
   border-radius:10px;
   text-align: center;
-  background-color: #2083b895;  ;
+  background: linear-gradient(to bottom, #8d9fee  0%, rgb(118, 97, 238) 100%);
+
+}
+
+#back{
+  background: linear-gradient(to bottom, #f586d9  0%, rgb(228, 71, 181) 100%);
+  width: 230px;
+  height: 40px;
+  color: #f1f1f1;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  border:1px solid #d12d9a ;
+  margin-top: 520px;
+  margin-left: -230px;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }

@@ -4,7 +4,7 @@ let txtPlayer
 function chooseName() {
     txtPlayer = document.getElementById("player1").value
     if (txtPlayer != "") {
-        document.getElementById("playerName").innerHTML = 'Name: ' + txtPlayer
+        document.getElementById("playerName").innerHTML = 'Nome : ' + txtPlayer
         startModal.style.display = "none";
     }
 }

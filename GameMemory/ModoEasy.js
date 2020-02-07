@@ -61,7 +61,7 @@ function flipCard() {
         hasFlippedCard = true;
         firstCard = this;
         moves++
-        document.getElementById("mouv").innerHTML = `Movements: ${moves}`
+        document.getElementById("mouv").innerHTML = `Movimentos : ${moves}`
         return;
 
     }
@@ -85,11 +85,11 @@ function checkForMatch() {
 
     if (isMatch) {
         score = score + 10
-        document.getElementById("score").innerHTML = `Score: ${score}`
+        document.getElementById("score").innerHTML = `Pontos : ${score}`
         disableCards()
     } else {
         score = score - 2
-        document.getElementById("score").innerHTML = `Score: ${score}`
+        document.getElementById("score").innerHTML = `Pontos : ${score}`
         unflipCards()
     }
 }
@@ -107,10 +107,10 @@ function disableCards() {
         clearInterval(timerStart)
         saveWinnerData()
         Swal.fire({
-            title: 'You win!',
+            title: 'Ganhaste!',
             showCancelButton: true,
             confirmButtonColor: '#46b9f7',
-            confirmButtonText: 'Play Again',
+            confirmButtonText: 'Mais uma vez',
             cancelButtonColor: '#ff68d2',
 
         }).then((result) => {
@@ -119,7 +119,7 @@ function disableCards() {
 
             } else {
 
-                location.href = "menu.html";
+                location.href = "Menu.html";
             }
         })
     }
@@ -169,10 +169,10 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             clearInterval(timerStart)
             Swal.fire({
-                title: 'Game Over!',
+                title: 'Perdeste!',
                 showCancelButton: true,
                 confirmButtonColor: '#46b9f7',
-                confirmButtonText: 'Try Again',
+                confirmButtonText: 'Mais uma vez',
                 cancelButtonColor: '#ff68d2',
             }).then((result) => {
                 if (result.value) {
@@ -180,7 +180,7 @@ function startTimer(duration, display) {
 
                 } else {
 
-                    location.href = "menu.html";
+                    location.href = "Menu.html";
                 }
 
             })
