@@ -139,7 +139,7 @@ body {
 input:-webkit-autofill {
   box-shadow: none;
   caret-color: #fff !important;
-  -webkit-box-shadow: 0 0 0 35px #000 inset !important;
+  -webkit-box-shadow: 0 0 0 35px rgb(243, 240, 240) inset !important;
   -webkit-text-fill-color: #fff !important;
 }
 
