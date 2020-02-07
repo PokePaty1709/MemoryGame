@@ -1,6 +1,6 @@
-const EASY_MODE_TIME = 180
-const MEDIUM_MODE_TIME = 120
-const HARD_MODE_TIME = 60
+
+const MEDIUM_MODE_TIME = 90
+
 const MATCH_CARD_LIMIT = 8
 
 //array das cartas
@@ -61,7 +61,7 @@ function flipCard() {
         hasFlippedCard = true;
         firstCard = this;
         moves++
-        document.getElementById("mouv").innerHTML = `Movimentos : ${moves}`
+        document.getElementById("move").innerHTML = `Movimentos : ${moves}`
         return;
 
     }
