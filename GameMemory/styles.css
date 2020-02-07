@@ -116,7 +116,7 @@ body {
   background: linear-gradient(to bottom, #bc72d6  0%, rgb(255, 104, 210) 100%);
   border-color: #82418e;
   width: 400px;
-  height: 200px;
+  height: 186px;
   padding-top: 20px;
   position: relative;
   margin: 15% auto;
@@ -128,8 +128,8 @@ body {
 .inputs {
   font-family: 'Raleway', sans-serif;
   margin: 15px 0px;
-  padding: 20px;
-  font-size: 20px;
+  padding: 15px;
+  font-size: 15px;
   border-radius: 50px;
   border: rgb(115, 31, 130) 1px solid;
   background: #d6ccff;
@@ -151,14 +151,14 @@ input:-webkit-autofill {
 #btnStart{
   text-decoration: none;
   color: #fff;
-  border:1px solid #2083b895;  ;
+  border:1px solid #2083b895;
   display: inline;
-  height:50px;
-  width:150px;
+  height:40px;
+  width:120px;
   margin: auto;
  /*  background: #ff6bf8; */
   transition: .5s;
-  border-radius:5px;
+  border-radius:10px;
   text-align: center;
   background-color: #2083b895;  ;
 }
