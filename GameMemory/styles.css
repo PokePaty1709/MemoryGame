@@ -48,6 +48,9 @@ body {
   border-radius: 5px;
   background: rgb(255, 104, 210);
   backface-visibility: hidden;
+  -webkit-user-drag: none; 
+  user-select: none;
+ 
 }
 
 .front-face {
